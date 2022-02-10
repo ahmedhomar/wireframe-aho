@@ -137,3 +137,45 @@ main p {
     justify-self: start;
   }
 }
+.projects-menu {
+  grid-area: p-menu;
+  align-self: center;
+  justify-self: end;
+}
+
+.projects-content {
+  grid-area: p-content;
+}
+
+.projects-wrapper {
+  grid-area: projects;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.projects-container {
+  display: grid;
+  margin: 0 2rem;
+  grid-template-columns: 2fr 6fr 4fr;
+  grid-template-rows: 3rem auto;
+  grid-template-areas: "logo p-menu p-menu" "p-content p-content p-content" "projects projects projects" "footer footer footer";
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 1rem;
+}
+.projects tech-stack__item {
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #fff;
+  border-radius: 0.625rem;
+  place-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
