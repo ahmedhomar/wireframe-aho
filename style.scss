@@ -4,7 +4,7 @@
 .logo {
   grid-area: logo;
   height: 100%;
-  line-height: 3rem;
+  line-height: 20rem;
   align-self: center;
 }
 
@@ -52,10 +52,14 @@ body {
   background-color: #d6dfea;
 }
 
+
+
+
 h1,
 h2,
 h3 {
   margin-top: 0;
+  color:#F24034
 }
 
 header h1 {
@@ -152,8 +156,9 @@ main p {
   }
   .main-menu {
     justify-self: start;
+  
 }
-
+}
 
 
 // Portfolio section
@@ -268,13 +273,7 @@ main p {
   .projects-menu {
     justify-self: start;
 }
-
-
-
-
-
-
-
+}
 
 
 
@@ -343,6 +342,57 @@ main p {
   }
 }
 
+// Large Screens
+@media all and (max-width: 992px) {
+  .about-container {
+    margin: 0 1rem;
+  }
+
+  .interests {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+// Tablet
+@media all and (max-width: 768px) {
+  .about-container {
+    grid-template-areas:
+    "logo ab-menu ab-menu"
+    "ab-content ab-content ab-content"
+    "interests interests interests"
+    "footer footer footer";
+  }
+  html {
+    font-size: 14px;
+  }
+  .interests {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 1rem;
+  }
+}
+
+
+// Phone
+@media all and (max-width: 540px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "logo"
+            "ab-menu"
+            "ab-content"
+            "interests"
+            "footer";
+    grid-gap: 2rem 0;        
+  }
+  .about-menu {
+    justify-self: start;
+}
+}
+
+
+
 // Contact section
 .contact-menu {
   grid-area: c-menu;
@@ -408,3 +458,49 @@ main p {
 }
 
 
+// Large Screens
+@media all and (max-width: 992px) {
+  .contact-container {
+    margin: 0 1rem;
+  }
+
+  .social {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+// Tablet
+@media all and (max-width: 768px) {
+  .contact-container {
+    grid-template-areas:
+    "logo c-menu c-menu"
+    "c-content c-content c-content"
+    "social social social"
+    "footer footer footer";
+  }
+  html {
+    font-size: 14px;
+  }
+  .social {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 1rem;
+  }
+}
+
+// Phone
+@media all and (max-width: 540px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "logo"
+            "c-menu"
+            "c-content"
+            "social"
+            "footer";
+    grid-gap: 2rem 0;        
+  }
+  .contact-menu {
+    justify-self: start;}
+  }
