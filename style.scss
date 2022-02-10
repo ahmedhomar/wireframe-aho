@@ -221,6 +221,63 @@ main p {
   }
 }
 
+// Large Screens
+@media all and (max-width: 992px) {
+  .projects-container {
+    margin: 0 1rem;
+  }
+
+  .projects {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+// Tablet
+@media all and (max-width: 768px) {
+  .projects-container {
+    grid-template-areas:
+    "logo p-menu p-menu"
+    "p-content p-content p-content"
+    "projects projects projects"
+    "footer footer footer";
+  }
+  html {
+    font-size: 14px;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 1rem;
+  }
+}
+
+
+// Phone
+@media all and (max-width: 540px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "logo"
+            "p-menu"
+            "p-content"
+            "projects"
+            "footer";
+    grid-gap: 2rem 0;        
+  }
+  .projects-menu {
+    justify-self: start;
+}
+
+
+
+
+
+
+
+
+
+
 // About section
 
 .about-menu {
