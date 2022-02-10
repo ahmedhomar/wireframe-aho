@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .logo {
   grid-area: logo;
   height: 100%;
@@ -21,7 +24,7 @@
 }
 
 .stack-wrapper {
-  grid-area: tech;
+  grid-area: tech-stack;
 }
 
 .footer {
@@ -36,17 +39,15 @@
   grid-template-areas:
     "logo menu menu"
     "content content sidebar"
-    "tech-stack__item tech-stack__item tech-stack__item"
+    "tech-stack tech-stack tech-stack"
     "footer footer footer";
 }
 
-* {
-  box-sizing: border-box;
-}
+
 
 html {
   font-size: 16px;
-  font-family: Georgia, serif;
+  font-family: Georgia, sans-serif;
 }
 
 body {
@@ -110,7 +111,7 @@ main p {
     margin: 0 1rem;
   }
 
-  .sponsors {
+  .tech-stack {
     grid-column-gap: 0.5rem;
   }
 }
@@ -130,7 +131,7 @@ main p {
     font-size: 14px;
   }
 
-  .sponsors {
+  .stech-stack {
     grid-template-columns: 1fr;
     grid-column-gap: 0;
     grid-row-gap: 1rem;
@@ -149,7 +150,7 @@ main p {
             "menu"
             "content"
             "sidebar"
-            "sponsors"
+            "tech-stack"
             "footer";
     grid-gap: 2rem 0;
    }
