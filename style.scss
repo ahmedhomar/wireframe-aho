@@ -103,6 +103,8 @@ main p {
     justify-content: center;
   }
 }
+
+
 // Large Screens
 @media all and (max-width: 992px) {
   .container {
@@ -113,6 +115,46 @@ main p {
     grid-column-gap: 0.5rem;
   }
 }
+
+// Tablet
+@media all and (max-width: 768px) {
+  .container {
+    grid-template-areas:
+    "logo menu menu"
+    "content content sidebar"
+    "tech-stack tech-stack tech-stack"
+    "footer footer footer";
+  }
+  html {
+    font-size: 14px;
+  }
+  .tech-stack {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 1rem;
+  }
+}
+
+
+// Phone
+@media all and (max-width: 540px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "logo"
+            "menu"
+            "content"
+            "sidebar"
+            "tech-stack"
+            "footer";
+    grid-gap: 2rem 0;        
+  }
+  .main-menu {
+    justify-self: start;
+}
+
+
 
 // Portfolio section
 
@@ -308,45 +350,4 @@ main p {
   }
 }
 
-// // Medium screens
 
-// @media all and (max-width: 768px) {
-//   .container {
-//     grid-template-areas:
-//       "logo menu menu"
-//       "content content content"
-//       "sidebar sidebar sidebar"
-//       "sponsors sponsors sponsors"
-//       "footer footer footer";
-//   }
-//   html {
-//     font-size: 14px;
-//   }
-
-//   .tech-stack {
-//     grid-template-columns: 1fr;
-//     grid-column-gap: 0;
-//     grid-row-gap: 1rem;
-//   }
-// }
-
-// Media Queries
-//  Small screens
-// @media all and (max-width: 540px) {
-//   .container {
-//     grid-template-columns: 1fr;
-//     grid-template-rows: auto;
-//     grid-template-areas:
-//       "logo"
-//       "menu"
-//       "content"
-//       "sidebar"
-//       "tech-stack"
-//       "footer";
-//     grid-gap: 2rem 0;
-//   }
-
-//   .main-menu {
-//     justify-self: start;
-//   }
-// }
