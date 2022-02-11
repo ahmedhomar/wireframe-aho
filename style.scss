@@ -4,8 +4,10 @@
 .logo {
   grid-area: logo;
   height: 100%;
-  line-height: 20rem;
+  line-height: 1.5rem;
   align-self: center;
+  font-size: 2rem;
+  text-decoration: none;
 }
 
 .main-menu {
@@ -48,10 +50,21 @@ html {
   font-family: nunito, sans-serif;
 }
 
+
+
 body {
   background-color: #d6dfea;
 }
 
+footer{
+  background-color: white;
+}
+
+.middle-ground {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
@@ -60,6 +73,7 @@ h2,
 h3 {
   margin-top: 0;
   color:#F24034
+
 }
 
 header h1 {
